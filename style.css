@@ -54,7 +54,6 @@ body {
 #nav h4 {
   text-transform: uppercase;
   font-weight: 500;
- 
 }
 
 video {
@@ -83,7 +82,10 @@ video {
 
 #page1 h1 {
   font-size: 140px;
+  margin-top: 50px;
+  margin-bottom: 20px;
   font-weight: 900;
+  line-height: 0.9;
   position: relative;
 }
 
@@ -107,17 +109,17 @@ video {
 #page1 p {
   font-size: 22px;
   font-weight: 500;
-  width: 40%;
+  width: 50%;
+  
 }
 
 #page2 {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   z-index: 10;
 }
 
 #scroller {
-  /* background-color: red; */
   white-space: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
@@ -173,25 +175,91 @@ video {
   justify-content: space-around;
 }
 
-#about-us img{
-    height: 220px;
-    width: 180px;
-    border-radius: 10px;
-    object-fit: cover;
+#about-us img {
+  height: 220px;
+  width: 180px;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
 #about-us-in {
-    width: 52%;
-    text-align: center;
+  width: 52%;
+  text-align: center;
 }
 
-#about-us-in h3{
-    font-size: 54px ;
-    font-weight: 800;
-    margin-bottom: 40px;
+#about-us-in h3 {
+  font-size: 54px;
+  font-weight: 800;
+  margin-bottom: 40px;
 }
 
-#about-us-in p{
-    font-size: 20px;
-    line-height: 35px;
+#about-us-in p {
+  font-size: 20px;
+  line-height: 35px;
+}
+
+#cards-container {
+  height: 90vh;
+  display: flex;
+  margin-top: 100px;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  z-index: 10;
+}
+
+.card {
+  height: 90%;
+  width: 24%;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  transition: all ease 0.6s;
+}
+
+.card p {
+  line-height: 2;
+}
+
+#card1 {
+  background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+#card2 {
+  background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+#card3 {
+  background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-color: #95c11e;
+  padding: 30px;
+  padding-top: 100px;
+  opacity: 0;
+  transition: all ease 0.6s;
+}
+
+.overlay h3 {
+  color: #000;
+  font-size: 40px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.overlay p {
+  color: #000;
+  font-size: 18px;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.card:hover {
+  transform: rotate3d(-1, 1, 0, 20deg);
 }
