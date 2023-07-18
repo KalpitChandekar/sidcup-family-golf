@@ -15,22 +15,24 @@ body {
 }
 
 #cursor {
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
   background-color: #95c11e;
   border-radius: 50%;
   position: fixed;
   z-index: 99;
+  transition: all linear 0.1s;
 }
 
 #cursor-blur {
   height: 400px;
   width: 400px;
-  background-color: #96c11e41;
+  background-color: rgba(150, 193, 30, 0.3);
   border-radius: 50%;
   position: fixed;
-  filter: blur(40px);
+  filter: blur(80px);
   z-index: 9;
+  transition: all linear 0.4s;
 }
 
 #nav {
@@ -111,4 +113,51 @@ video {
   height: 100vh;
   width: 100%;
   z-index: 10;
+}
+
+#scroller {
+  /* background-color: red; */
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  z-index: 10;
+}
+
+#scroller::-webkit-scrollbar {
+  display: none;
+}
+
+#scroller-in {
+  display: inline-block;
+  white-space: nowrap;
+  animation-name: scroll;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+#scroller h4 {
+  display: inline-block;
+  font-size: 120px;
+  font-weight: 900;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-right: 10px;
+  color: #000;
+  transition: all linear 0.5s;
+  -webkit-text-stroke: 1px #fff;
+}
+
+#scroller h4:hover {
+  color: #95c11e;
+  -webkit-text-stroke: 1.5px #95c11e;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
