@@ -71,6 +71,7 @@ body {
   cursor: pointer;
   font-size: 1.15vw;
 }
+
 video {
   height: 100%;
   width: 100%;
@@ -133,6 +134,7 @@ video {
   justify-content: center;
   border-radius: 50%;
   transition: all ease 0.5s;
+  cursor: pointer;
 }
 #page1 #arrow i {
   font-size: 50px;
@@ -244,6 +246,10 @@ video {
   background-position: center;
   overflow: hidden;
   transition: all ease 0.6s;
+  transform: scale(0.8);
+}
+.card:hover {
+  transform: scale(1);
 }
 #card1 {
   background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
